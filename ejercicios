@@ -50,8 +50,7 @@ if op == "/":
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
 
 print("\nEjercicio 3")
-año_escogido = input("Introduzca un año: ")
-5
+
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -60,3 +59,19 @@ año_escogido = input("Introduzca un año: ")
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+
+print("\nEjercicio 4")
+edad = int(input("introduzca una edad: "))
+
+if edad <=2:
+  print("Es un bebé")
+elif 3 <= edad <= 12:
+  print("Es un niño")
+elif 13 <= edad <= 17:
+  print("Es adolescente")
+elif 18 <= edad <= 64:
+  print("Es adulto")
+elif edad >= 65:
+  print("Es anciano")
+else:
+  print("Edad no válida")
