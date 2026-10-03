@@ -92,3 +92,94 @@ mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40)
 # y convertirlos en funciones
 # e intentar utilizar todos los casos y conceptos
 # que hemos visto hasta ahora
+
+
+###
+# EJERCICIOS (for)
+###
+
+# Ejercicio 1: Imprimir números pares
+# Imprime todos los números pares del 2 al 20 (inclusive) usando un bucle for.
+print("\nEjercicio 1:")
+
+def imprimir_pares():
+   numeros = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+   for numero in numeros:
+      if numero % 2 == 0:
+         print(numero)
+
+imprimir_pares()
+
+# Ejercicio 2: Calcular la media de una lista
+# Dada la siguiente lista de números:
+# numeros = [10, 20, 30, 40, 50]
+# Calcula la media de los números usando un bucle for.
+print("\nEjercicio 2:")
+
+def calcular_media(numeros_media):
+   suma = 0
+   
+   for numero in numeros_media:
+    suma += numero
+    media = suma / len(numeros_media)
+   return media
+
+numeros_media = [10, 20, 30, 40, 50]
+print(calcular_media(numeros_media))
+
+
+# Ejercicio 3: Buscar el máximo de una lista
+# Dada la siguiente lista de números:
+# numeros = [15, 5, 25, 10, 20]
+# Encuentra el número máximo en la lista usando un bucle for.
+print("\nEjercicio 3:")
+
+def buscar_max(numeros):
+   max_num = numeros[0]
+   
+   for num in numeros:
+      if num >= max_num:
+         max_num = num
+   return max_num
+
+numeros = [15, 5, 25, 10, 20]
+print(f"El número máximo de la lista es: {buscar_max(numeros)}")  
+
+
+# Ejercicio 4: Filtrar cadenas por longitud
+# Dada la siguiente lista de palabras:
+# palabras = ["casa", "arbol", "sol", "elefante", "luna"]
+# Crea una nueva lista que contenga solo las palabras con más de 5 letras
+# usando un bucle for y list comprehension.
+print("\nEjercicio 4:")
+
+def filtrar_palabras(palabras):
+   palabras_largas = [palabra for palabra in palabras if len(palabra) > 5]
+   return palabras_largas
+
+
+palabras = ["casa", "arbol", "sol", "elefante", "luna"]
+print(filtrar_palabras(palabras))
+
+
+# Ejercicio 5: Contar palabras que empiezan con una letra
+# Dada la siguiente lista de palabras:
+# palabras = ["casa", "arbol", "sol", "elefante", "luna", "coche"]
+# Pide al usuario que introduzca una letra.
+# Cuenta cuántas palabras en la lista empiezan con esa letra (sin diferenciar mayúsculas/minúsculas).
+print("\nEjercicio 5:")
+
+def contar_palabras(palabras,letra):
+   contador = 0
+
+   for palabra in palabras:
+      if palabra.lower().startswith(letra.lower()):
+         contador += 1
+   return contador
+
+letra = input("Introduzca una letra: ")
+palabras = ["casa", "arbol", "sol", "elefante", "luna", "coche"]
+
+resultado = contar_palabras(palabras, letra)
+print(f"Hay {resultado} palabras que empiezan por la letra {letra}")
