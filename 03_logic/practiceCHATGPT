@@ -1,0 +1,85 @@
+
+#EJERCICIOS LOGICA, DICCIONARIOS, FUNCTIONS....SACADOS DE CHATGPT
+
+
+##################
+# Contar Pares
+def contar_pares(numeros):
+    contador = 0
+
+    for numero in numeros:
+        if numero % 2 == 0:
+            contador += 1
+    return contador
+
+numeros = [3, 8, 12, 5, 7, 20]
+print(contar_pares(numeros))
+
+######################
+# Contar aprobados
+def contar_aprobados(notas):
+    count = 0
+
+    for nota in notas:
+        if nota >= 5:
+            count += 1
+    return count
+
+notas = [7, 4, 8, 3, 5, 9, 2]
+print(f"Hay: {contar_aprobados(notas)} aprobados")
+
+
+#######################
+# Encontrar numero mayor
+def encontrar_mayor(numeros):
+    mayor = numeros[0]
+
+    for numero in numeros:
+        if numero > mayor:
+            mayor = numero
+    return mayor
+
+numeros = [14, 7, 32, 5, 21, 48, 9]
+print(encontrar_mayor(numeros))
+
+
+#####################
+# Control de acceso
+
+usuarios = {
+    "fran": {"edad": 21, "activo": True},
+    "ana": {"edad": 17, "activo": True},
+    "pablo": {"edad": 25, "activo": False},
+    "lucia": {"edad": 19, "activo": True}
+}
+
+def pueden_entrar(usuarios):
+    permitidos = [] 
+
+    for usuario in usuarios:
+        if usuarios[usuario]["edad"] >= 18 and usuarios[usuario]["activo"] == True:
+            permitidos.append(usuario)
+    return permitidos
+
+print(pueden_entrar(usuarios))
+
+
+#####################
+# Procesar pedidos
+
+pedidos = [
+    {"producto": "camiseta", "precio": 25, "cantidad": 2},
+    {"producto": "zapatillas", "precio": 70, "cantidad": 1},
+    {"producto": "gorra", "precio": 15, "cantidad": 3},
+    {"producto": "pantalon", "precio": 40, "cantidad": 2}
+]
+
+
+def calcular_pedidos(pedidos):
+    vendido = 0
+
+    for pedido in pedidos:
+        vendido += pedido["precio"] * pedido["cantidad"]
+    return vendido
+
+print(calcular_pedidos(pedidos))
